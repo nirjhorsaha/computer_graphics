@@ -1,12 +1,9 @@
 # depslib dependency file v1.0
-1655324072 source:e:\computer graphics\testfile\main.cpp
+1653921653 source:e:\computer graphics\labtask-1\main.cpp
 	<windows.h>
-	<mmsystem.h>
-	<GL\glut.h>
-	<GL/glu.h>
-	<math.h>
-	<stdlib.h>
+	<GL/glut.h>
 	<stdio.h>
+	<GL/gl.h>
 
 1301111162 c:\program files (x86)\codeblocks\mingw\include\windows.h
 	<winresrc.h>
@@ -212,28 +209,16 @@
 1301111156 c:\program files (x86)\codeblocks\mingw\include\oleidl.h
 	<objfwd.h>
 
-1426328128 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
-	"freeglut_std.h"
+1453865572 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
 
 1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
 
 1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\glu.h
 	<stddef.h>
 	<GL/gl.h>
-
-1426328128 c:\program files (x86)\codeblocks\mingw\include\gl\freeglut_std.h
-	<windows.h>
-	<EGL/egl.h>
-	<GLES/gl.h>
-	<GLES2/gl2.h>
-	<OpenGL/gl.h>
-	<OpenGL/glu.h>
-	<GL/gl.h>
-	<GL/glu.h>
-	<stdlib.h>
-
-1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
-	<_mingw.h>
 
 1341006776 c:\program files (x86)\codeblocks\mingw\include\stdio.h
 	<_mingw.h>

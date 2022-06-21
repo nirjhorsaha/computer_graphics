@@ -1,12 +1,11 @@
 # depslib dependency file v1.0
-1655324072 source:e:\computer graphics\testfile\main.cpp
+1655138478 source:e:\computer graphics\lab4_2d-spin\main.cpp
 	<windows.h>
-	<mmsystem.h>
-	<GL\glut.h>
-	<GL/glu.h>
-	<math.h>
+	<GLUT/glut.h>
+	<GL/glut.h>
 	<stdlib.h>
-	<stdio.h>
+	<unistd.h>
+	<math.h>
 
 1301111162 c:\program files (x86)\codeblocks\mingw\include\windows.h
 	<winresrc.h>
@@ -212,8 +211,10 @@
 1301111156 c:\program files (x86)\codeblocks\mingw\include\oleidl.h
 	<objfwd.h>
 
-1426328128 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
-	"freeglut_std.h"
+1453865572 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
 
 1301111164 c:\program files (x86)\codeblocks\mingw\include\gl\gl.h
 
@@ -221,27 +222,31 @@
 	<stddef.h>
 	<GL/gl.h>
 
-1426328128 c:\program files (x86)\codeblocks\mingw\include\gl\freeglut_std.h
-	<windows.h>
-	<EGL/egl.h>
-	<GLES/gl.h>
-	<GLES2/gl2.h>
-	<OpenGL/gl.h>
-	<OpenGL/glu.h>
-	<GL/gl.h>
-	<GL/glu.h>
-	<stdlib.h>
+1341006776 c:\program files (x86)\codeblocks\mingw\include\unistd.h
+	<io.h>
+	<process.h>
+	<getopt.h>
+	<sys/types.h>
 
-1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
+1341006774 c:\program files (x86)\codeblocks\mingw\include\io.h
 	<_mingw.h>
-
-1341006776 c:\program files (x86)\codeblocks\mingw\include\stdio.h
-	<_mingw.h>
-	<stddef.h>
-	<stdarg.h>
 	<sys/types.h>
 
 1341006780 c:\program files (x86)\codeblocks\mingw\include\sys\types.h
 	<_mingw.h>
 	<stddef.h>
+
+1341006774 c:\program files (x86)\codeblocks\mingw\include\process.h
+	<_mingw.h>
+	<sys/types.h>
+	<stdint.h>
+
+1341006776 c:\program files (x86)\codeblocks\mingw\include\stdint.h
+	<stddef.h>
+
+1341006772 c:\program files (x86)\codeblocks\mingw\include\getopt.h
+	<_mingw.h>
+
+1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
+	<_mingw.h>
 
