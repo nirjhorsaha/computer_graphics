@@ -74,7 +74,6 @@ void brown_hill()
 }
 
 //*** Circle_Model***//
-
 void circle(GLdouble rad)
 {
    glBegin(GL_POLYGON);
@@ -92,24 +91,6 @@ void circle(GLdouble rad)
     glEnd();
 }
 
-
-void circle1(GLdouble rad)
-{
-    glBegin(GL_POLYGON);
-    {
-      	for(int i=0;i<200;i++)
-        {
-            float pi=3.1416;
-            float A=(i*2*pi)/200;
-            float r=rad;
-            float x = r * cos(A);
-            float y = r+10 * sin(A);
-            glVertex2f(x,y );
-        }
-    }
-    glEnd();
-}
-
 // *** Sun_Model **//
 void Sun_Model()
 {
@@ -119,43 +100,32 @@ void Sun_Model()
     glPopMatrix();
 }
 
-void update2(int value)
-{
-    if(position2 <-1.3)
-    {
-        position2 -= _move2;
-    }
-	glutPostRedisplay(); //Notify GLUT that the display has changed
-
-	glutTimerFunc(20, update2, 0); //Notify GLUT to call update again in 25 milliseconds
-}
-
 
 //*** Cloud_Model***//
 void cloud_model_one(){
 
     glColor3f(1.25, 0.924, 0.930);
 
-    ///Top_Left
+    //Top_Left
     glPushMatrix();
     glTranslatef(320,210,0);
     circle(15);
     glPopMatrix();
 
-    ///Top
+    //Top
     glPushMatrix();
     glTranslatef(340, 225, 0);
     circle(16);
     glPopMatrix();
 
-    ///Right
+    //Right
     glPushMatrix();
     glTranslatef(360,210,0);
     circle(16);
     glPopMatrix();
 
 
-    ///middle_Fill
+    //middle_Fill
     glPushMatrix();
     glTranslatef(355,210,0);
     circle(16);
@@ -243,49 +213,49 @@ void cloud_model_Two(){
 void cloud_model_Three(){
     glColor3f(1.25, 0.924, 0.930);
 
-    ///Left_Part
+    //Left_Part
     glPushMatrix();
     glTranslatef(300,200,0);
     circle(15);
     glPopMatrix();
 
-    ///Top_Left
+    //Top_Left
     glPushMatrix();
     glTranslatef(320,210,0);
     circle(15);
     glPopMatrix();
 
-    ///Top
+    //Top
     glPushMatrix();
     glTranslatef(340,220,0);
     circle(16);
     glPopMatrix();
 
-    ///Top_Right
+    //Top_Right
     glPushMatrix();
     glTranslatef(360,210,0);
     circle(15);
     glPopMatrix();
 
-    ///Right_Part
+    //Right_Part
     glPushMatrix();
     glTranslatef(380,200,0);
     circle(15);
     glPopMatrix();
 
-    ///Bottom_Right
+    //Bottom_Right
     glPushMatrix();
     glTranslatef(360,190,0);
     circle(20);
     glPopMatrix();
 
-    ///Bottom_Left
+    //Bottom_Left
     glPushMatrix();
     glTranslatef(320,190,0);
     circle(20);
     glPopMatrix();
 
-    ///Bottom
+    //Bottom
     glPushMatrix();
     glTranslatef(340,190,0);
     circle(20);
@@ -293,7 +263,6 @@ void cloud_model_Three(){
 }
 
 void hill_big2(){
-
     //Hill
 	glBegin(GL_POLYGON);
     glColor3f(0.38, 0.41, 0.36);
@@ -306,7 +275,7 @@ void hill_big2(){
 //*** Tilla_Model ***//
 void Tilla_One_Model(){
 
-    ///Tilla
+    //Tilla
 	glBegin(GL_POLYGON);
 	glColor3ub(34.0, 153.0, 84.0);
 	glVertex2i(125, 70);
@@ -324,7 +293,7 @@ void Tilla_One_Model(){
 void Tilla_Two_Model(){
 
 	glColor3ub(34.0, 153.0, 84.0);
-    /// Left_Part
+    // Left_Part
     glPushMatrix();
     glTranslatef(430,90,0);
     circle(30);
@@ -350,7 +319,7 @@ void Tilla_Two_Model(){
     circle(30);
     glPopMatrix();
 
-    ///Right_Part
+    //Right_Part
     glPushMatrix();
     glTranslatef(445,80,0);
     circle(30);
@@ -383,121 +352,8 @@ void Tilla_Two_Model(){
 
 }
 
-///*** House_Model ***///
-void house(){
-    ///House_Roof
-	glBegin(GL_POLYGON);
-    glColor3ub(44.0, 62.0, 80.0);
-	glVertex2i(285, 105);
-	glVertex2i(285, 130);
-	glVertex2i(380, 115);
-	glVertex2i(380, 105);
-
-	glEnd();
-
-  ///House_Roof_Shadow
-	glBegin(GL_POLYGON);
-    glColor3f(0.0, 0.0, 0.0);
-	glVertex2i(285, 105);
-	glVertex2i(285, 120);
-	glVertex2i(380, 105);
-	glVertex2i(380, 105);
-
-	glEnd();
-
-    ///House_Fence
-	glBegin(GL_POLYGON);
-    glColor3f(255.0, 0.0, 0.0);
-	glVertex2i(290, 70);
-	glVertex2i(290, 104);
-	glVertex2i(375, 104);
-	glVertex2i(375, 70);
-
-	glEnd();
-
-    ///House_Fence_Shadow
-	glBegin(GL_POLYGON);
-    glColor3f(255.0, 0.0, 0.0);
-	glVertex2i(310, 70);
-	glVertex2i(350, 104);
-	glVertex2i(375, 104);
-	glVertex2i(375, 70);
-
-	glEnd();
-
-    ///House_Door
-	glBegin(GL_POLYGON);
-    glColor3f(0.38, 0.41, 0.36);
-	glVertex2i(330, 70);
-	glVertex2i(330, 100);
-	glVertex2i(350, 100);
-	glVertex2i(350, 70);
-
-	glEnd();
-
-    ///House_Window1
-	glBegin(GL_POLYGON);
-    glColor3f(0.38, 0.21, 0.26);
-	glVertex2i(295, 75);
-	glVertex2i(295, 90);
-	glVertex2i(310, 90);
-	glVertex2i(310, 75);
-
-	glEnd();
-
-    ///House_Window2
-	glBegin(GL_POLYGON);
-    glColor3f(0.38, 0.21, 0.26);
-	glVertex2i(312, 75);
-	glVertex2i(312, 90);
-	glVertex2i(327, 90);
-	glVertex2i(327, 75);
-
-	glEnd();
-
-    ///House_Window3
-	glBegin(GL_POLYGON);
-    glColor3f(0.38, 0.21, 0.26);
-	glVertex2i(355, 75);
-	glVertex2i(355, 90);
-	glVertex2i(370, 90);
-	glVertex2i(370, 75);
-
-	glEnd();
-
-    ///House_Small_Roof
-	glBegin(GL_POLYGON);
-    glColor3f(0.0, 0.0, 0.0);
-	glVertex2i(250, 90);
-	glVertex2i(257, 104);
-	glVertex2i(290, 104);
-	glVertex2i(290, 90);
-
-	glEnd();
-
-    ///House_Small_Fence
-	glBegin(GL_POLYGON);
-    glColor3ub(243.0, 156.0, 18.0);
-	glVertex2i(255, 70);
-	glVertex2i(255, 90);
-	glVertex2i(290, 90);
-	glVertex2i(290, 70);
-
-	glEnd();
-
-    ///House_Small_Door
-	glBegin(GL_POLYGON);
-    glColor3f(0.11, 0.23, 0.36);
-	glVertex2i(260, 70);
-	glVertex2i(260, 80);
-	glVertex2i(285, 80);
-	glVertex2i(285, 70);
-
-	glEnd();
-}
-
+//*** House_Model ***//
 void house2(){
-
     glPushMatrix();
     glTranslatef(690, 250,0);
     glScalef(0.18,0.35,0);
@@ -742,7 +598,6 @@ void Tree_Model_Three(){
 }
 
 //plane
-
 void plane(){
 
     glPushMatrix();
@@ -802,7 +657,7 @@ void update1(int value) {
 	glutTimerFunc(22, update1, 0);
 }
 
-
+//plane
 void plane2(){
     glColor3ub(247, 249, 249);
     glPushMatrix();
@@ -829,16 +684,17 @@ void cloud_one(){
     glTranslatef(cx,225,0);//-40
     cloud_model_one();
     glPopMatrix();
-
 }
 
 void star(){
 if ( condition==true)
 
 {
-  glBegin(GL_POINTS);              // Each set of 4 vertices form a quad
-    glColor3ub(247, 249, 249); // Red
+  glBegin(GL_POINTS);            // Each set of 4 vertices form a quad
+        glColor3ub(247, 249, 249); // Red
+
         glVertex2f(500.1f, 500.3f);    // x, y
+
         glVertex2f( 550.1f, 504.0f);
 
         glVertex2f( 150.1f, 504.0f);
@@ -982,11 +838,8 @@ float updatex1()
 
 
 void night(){
-
     glColor3f(0.0, 0.0, 0.0);
-
     glPushMatrix();
-
     glBegin(GL_POLYGON);
         glVertex3i(0,n1,0);
         glVertex3i(0,1000, 0);
@@ -994,7 +847,6 @@ void night(){
         glVertex3i(1200,n1, 0);
         glPopMatrix();
     glEnd();
-
 }
 
 
@@ -1020,7 +872,6 @@ void cloud_four(){
     glTranslatef(dx+300,275,0);
     cloud_model_Two();
     glPopMatrix();
-
 }
 
 //*** Cloud_Five_Model_Three ***//
@@ -1249,28 +1100,28 @@ void mouse(int key, int state, int x, int y){
 }
 void handleKeypress(unsigned char key, int x, int y) {
 	switch (key) {
-    case 'i':
+    case 'i':   //boat stop
         _move = 0.0f;
         break;
 
-    case 'o':
+    case 'o':   //boat move
         _move = 5.0f;
         break;
 
-    case 'k':
+    case 'k':   //plain stop
         _move1 = 0.0f;
         break;
 
-    case 'l':
+    case 'l':   //plane move
         _move1 = 3.0f;
         break;
 
-    case 'n':
+    case 'n':   //night
          updatex();
      condition=true;
         break;
 
-    case 'd':
+    case 'd':   //day
     updatex1();
      condition=false;
         break;
@@ -1290,7 +1141,7 @@ int main(int argc, char** argv)
 	glutDisplayFunc(display);
 	glutTimerFunc(20, update, 0);
 	glutTimerFunc(20, update1, 0);
-	glutTimerFunc(20, update2, 0);
+//	glutTimerFunc(20, update2, 0);
     glutMouseFunc(mouse);
     glutKeyboardFunc(handleKeypress);
 	glutMainLoop();
